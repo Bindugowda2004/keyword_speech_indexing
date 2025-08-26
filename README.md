@@ -1,5 +1,5 @@
 # Keyword Speech Indexing — Full Stack (Python + Vanilla Frontend)
-## speech to text transcription in multiple languages ( 12 inidan languages)
+## speech to text transcription in multiple languages ( 12 Indian languages)
 
  Project to upload an audio/video file, generate subtitles (VTT) in **multiple Indian languages**, play the video with selectable subtitles, and **jump to timestamps by keyword**.
 
