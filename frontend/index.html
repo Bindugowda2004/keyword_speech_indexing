@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keyword Speech Indexing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Keyword Speech Indexing</h1>
+  </header>
+
+  <main>
+    <section class="uploader">
+      <h2>Upload Audio/Video</h2>
+      <form id="uploadForm">
+        <input type="file" id="fileInput" accept="video/*,audio/*" required />
+        <div class="lang-list">
+          <label><input type="checkbox" data-lang="all" checked /> All Indian languages</label>
+          <div id="langs"></div>
+        </div>
+        <button type="submit">Upload & Transcribe</button>
+      </form>
+      <div id="status"></div>
+    </section>
+
+    <section id="playerSection" class="hidden">
+      <h2>Player & Subtitles</h2>
+      <video id="player" controls></video>
+
+      <div class="search">
+        <input id="searchInput" placeholder="Type a keyword… (e.g., namaste)" />
+        <select id="langSelect"></select>
+        <button id="searchBtn">Go to first match</button>
+        <span id="searchInfo"></span>
+      </div>
+
+      <div id="hitsList"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Backend must be running at the same origin. Start with: <code>uvicorn app.main:app --reload</code></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
